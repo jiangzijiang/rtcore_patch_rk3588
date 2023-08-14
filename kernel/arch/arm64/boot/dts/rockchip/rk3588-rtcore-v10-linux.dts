@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Copyright (c) 2022 Rockchip Electronics Co., Ltd.
+ *
+ */
+
+/dts-v1/;
+
+#include "rk3588-rtcore.dtsi"
+//#include "rk3588-rtcore-imx415.dtsi"
+#include "rk3588-rtcore-gc2053.dtsi"
+//#include "rk3588-qiyuan-m3lite.dtsi"
+//#include "rk3588-rtcore-ts.dtsi"
+#include "rk3588-linux.dtsi"
+
+/ {
+	model = "Rockchip RK3588 RTCORE V11 Board";
+	compatible = "rockchip,rk3588-rtcore-v11", "rockchip,rk3588";
+};
