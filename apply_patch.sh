@@ -1,6 +1,8 @@
 #!/bin/bash
 
 SDK_TOP_DIR=".."
+SDK_VERSION=v1.06
+
 
 function show_notice()
 {
@@ -57,5 +59,20 @@ show_notice
 check_dir "$SDK_TOP_DIR/kernel"
 check_dir "$SDK_TOP_DIR/u-boot"
 check_dir "$SDK_TOP_DIR/device"
+
+if [ $# -eq 1 ];then
+	SDK_VERSION=$1
+fi
+
+if [ "$SDK_VERSION" == "" ];then
+	echo -e "\033[31m Please set SDK_VERSION before patch.\033[0m"
+	exit
+fi
+echo "SDK_VERSION=$SDK_VERSION"
+
+if [ ! -d $SDK_VERSION ];then
+	echo -e "\033[31m No SDK_VERSION: $SDK_VERSION.\033[0m"
+	exit
+fi
 
 confirm_change
