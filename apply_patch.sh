@@ -31,7 +31,8 @@ function apply_change()
 {
 
     echo -e "\033[32m=========>>>apply change\033[0m"
-	tar cf - device kernel | tar xf - -C ../
+	#tar cf - --strip-components=1 $SDK_VERSION/device $SDK_VERSION/kernel | tar xf - -C ../
+	tar cf -  -C $SDK_VERSION . | tar xf - -C ../
     echo -e "\033[32m=========>>>apply change finished\033[0m"
 }
 
