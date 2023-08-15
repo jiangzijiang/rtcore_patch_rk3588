@@ -46,6 +46,6 @@ export RK_PACKAGE_FILE=rk3588-package-file
 # Single WiFi configuration: AP6256 or CYW43455: RK_WIFIBT_CHIP=AP6256
 export RK_WIFIBT_CHIP=ALL_AP
 # Define BT ttySX
-export RK_WIFIBT_TTY=ttyS8
+export RK_WIFIBT_TTY=ttyS9
 # <dev>:<mount point>:<fs type>:<mount flags>:<source dir>:<image size(M|K|auto)>:[options]
 export RK_EXTRA_PARTITIONS="oem:/oem:ext2:defaults:oem_normal:auto:resize@userdata:/userdata:ext2:defaults:userdata_normal:auto:resize"
